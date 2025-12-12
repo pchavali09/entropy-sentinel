@@ -8,7 +8,7 @@ This extension is built on a **"Security Zero"** philosophy. Our goal is to catc
 
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/pchavali09/entropy-sentinel.git](https://github.com/YOUR_USERNAME/entropy-sentinel.git)
+    git clone git clone https://github.com/pchavali09/entropy-sentinel.git
     ```
 2.  **Install dependencies:**
     ```bash
