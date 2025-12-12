@@ -1,0 +1,32 @@
+name: 🐛 False Positive Report
+description: The tool flagged something that is NOT a secret.
+title: "[False Positive]: <Brief Description>"
+labels: ["false-positive", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! To fix the regex, we need the exact code snippet that triggered the Red Box.
+  - type: textarea
+    id: snippet
+    attributes:
+      label: Code Snippet
+      description: Paste the code that was incorrectly flagged.
+      placeholder: |
+        const myColor = "#FFFFFF"; // This glowed red but shouldn't have!
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: What language were you writing in? (e.g., Python, Rust, TS)
+      placeholder: TypeScript
+  - type: dropdown
+    id: version
+    attributes:
+      label: VS Code Version
+      options:
+        - Latest
+        - Insiders
+        - Older

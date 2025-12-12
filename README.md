@@ -1,71 +1,50 @@
-# entropy-sentinel README
+# 🛡️ Entropy Sentinel
+> **Secure Vibe Coding.** The open-source bodyguard for your clipboard.
 
-This is the README for your extension "entropy-sentinel". After writing up a brief description, we recommend including the following sections.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Security: Local](https://img.shields.io/badge/Security-100%25_Local-green)](https://github.com/YOUR_USERNAME/entropy-sentinel/blob/main/src/analysis/scanner.ts)
+[![VS Code](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=YOUR_ID.entropy-sentinel)
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+AI coding assistants are great, but they love to suggest code like `const apiKey = "sk_123..."`.
+**Entropy Sentinel** watches your editor in real-time and warns you before you commit secrets.
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+### 1. 🛑 Real-Time Secret Detection
+We use **Shannon Entropy** analysis to detect random strings (API keys, tokens, salts) instantly.
+* **High Risk:** Fading **Red Glow** (Entropy > 4.5 or Sensitive Variable Name).
+* **Weak Keys:** Fading **Yellow Glow** (Detects dummy values like `123456` or `changeMe`).
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+### 2. 🧠 Context-Aware Scanning
+Unlike dumb linters, we understand variable names:
+* `const page_id = "a8b9c..."` → **Safe** (Ignored).
+* `const stripe_key = "a8b9c..."` → **Danger** (Flagged).
 
-## Working with Markdown
+### 3. 💡 The "One-Click Vault"
+Don't break your flow to create a `.env` file.
+1.  Click the Lightbulb 💡 on any flagged secret.
+2.  Select **"Move to .env"**.
+3.  **Done.** We create the file, append the key, and refactor your code to `process.env.KEY`.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+---
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## 🔒 Privacy & Security (Zero Data Exfiltration)
 
-## For more information
+**We take this seriously.**
+* **100% Local:** All entropy calculation happens on your machine.
+* **No Analytics:** We do not track your keystrokes.
+* **No Cloud:** We do not send your code to any server.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Don't believe us? **Audit the code:**
+👉 [View the Scanner Logic](src/analysis/scanner.ts)
 
-**Enjoy!**
+---
+
+## 🚀 Contributing
+Found a False Positive? (e.g., it flagged your CSS hex code).
+Please open an issue or submit a PR! See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 📄 License
+MIT
