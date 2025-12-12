@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.vscode-test/
+
+# Build Output
+out/
+dist/
+*.vsix
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+
+# Logs & OS Files
+*.log
+.DS_Store
+
+# User Settings
+.vscode/
+
+# Test Files (Don't commit your local tests)
+test.js
+app.js
+temp/
