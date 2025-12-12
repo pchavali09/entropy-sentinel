@@ -3,7 +3,7 @@
   "displayName": "Entropy Sentinel - Secure Vibe Coding",
   "description": "Real-time security scanner for Vibe Coding. Detects secrets and auto-vaults them to .env.",
   "version": "0.0.1",
-  "publisher": "temp-publisher",
+  "publisher": "pavanchavali",
   "license": "MIT",
   "repository": {
     "type": "git",

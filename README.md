@@ -45,6 +45,20 @@ Don't believe us? **Audit the code:**
 
 ---
 
+## 📸 Features Demo
+
+| **Real-Time Detection** | **The Fixer (One-Click Vault)** |
+|:---:|:---:|
+| ![Context Scan](images/context-scan.png) | ![Quick Fix](images/quick-fix.png) |
+| *Detects high-entropy secrets & ignores safe IDs* | *Instantly offers to move secrets to .env* |
+
+### ✅ The Result
+Your code is instantly refactored to use environment variables.
+
+![Refactor Result](images/refactor-result.png)
+
+---
+
 ## 🚀 Contributing
 Found a False Positive? (e.g., it flagged your CSS hex code).
 Please open an issue or submit a PR! See [CONTRIBUTING.md](CONTRIBUTING.md).
