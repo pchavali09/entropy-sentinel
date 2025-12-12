@@ -5,6 +5,9 @@
 [![Security: Local](https://img.shields.io/badge/Security-100%25_Local-green)](https://github.com/YOUR_USERNAME/entropy-sentinel/blob/main/src/analysis/scanner.ts)
 [![VS Code](https://img.shields.io/badge/VS%20Code-Marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=YOUR_ID.entropy-sentinel)
 
+## 📦 Installation
+Currently in Beta. **[👉 Click here for Installation Instructions](INSTALL.md)**
+
 AI coding assistants are great, but they love to suggest code like `const apiKey = "sk_123..."`.
 **Entropy Sentinel** watches your editor in real-time and warns you before you commit secrets.
 
